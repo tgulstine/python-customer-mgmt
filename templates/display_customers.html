@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"  rel="stylesheet">
+    </head>
+    <body>
+     
+        <p></p>
+        <div class="row">
+            <div class="col-md-1"><strong>Id</strong></div>
+            <div class="col-md-3"><strong>Name</strong></div>
+            <div class="col-md-3"><strong>Address</strong></div>
+            <div class="col-md-3"><strong>City</strong></div>
+            <div class="col-md-2"><strong>State/Province</strong></div>
+        </div>
+    
+        {% for customer in customers %}
+        <div class="row">
+            <div class="col-md-1">{{customer.Id}}</div>
+            <div class="col-md-3">{{customer.Name}}</div>
+            <div class="col-md-3">{{customer.Address}}</div>
+            <div class="col-md-3">{{customer.City}}</div>
+            <div class="col-md-2">{{customer.StateProvince}}</div>
+        </div>
+        {% endfor %}
+    </body>
+</html>

@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"  rel="stylesheet">
+    </head>
+    <body>
+        <strong>Customer:</strong><br>
+        {{Name}}<br>
+        {{Address}}<br>
+        {{City}}<br>
+        {{StateProvince}}
+
+        <p></p>
+        <div class="row">
+            <div class="col-md-4"><strong>Item Name</strong></div>
+            <div class="col-md-4"><strong>Price</strong></div>
+        </div>
+        
+        {% for item in Items %}
+        <div class="row">
+            <div class="col-md-4">{{item.ItemName}}</div>
+            <div class="col-md-4">{{item.ItemPrice}}</div>
+        </div>
+        {% endfor %}
+
+    </body>
+</html>
