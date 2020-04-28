@@ -57,7 +57,7 @@ def addCustomer(request):
 
 def manageCustomers(request):
     context = getAllCustomers()
-    return render(request, 'manage_customers.html', context)
+    return render(request, 'manage_customers.html', { 'context' : context)
 
 def getCustomers(request):
     context = getAllCustomers()
