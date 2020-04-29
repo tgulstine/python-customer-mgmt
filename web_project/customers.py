@@ -51,9 +51,15 @@ def addCustomer(request):
         is_tax_exempt = request.POST.get('is_tax_exempt', 0)
         is_tax_exempt = 1 if is_tax_exempt == 'on' else 0
         name = request.POST.get('name', '')
+        address = request.POST.get('address', '')
+        city = request.POST.get('city', '')
+        state_province = request.POST.get('state_province', '')
+        payment_terms = request.POST.get('payment_terms', '')
+        location = request.POST.get('location', '')
+ 
         
-        values = (name, request.POST['address'], request.POST['city'], request.POST['state_province'], 
-                    request.POST['payment_terms'], is_tax_exempt, request.FILES['location'].name)        
+        values = (name, address, city, state_province, 
+                    payment_terms, is_tax_exempt, location)        
         dbCursor.execute(sql, values)
 
 def manageCustomers(request):
